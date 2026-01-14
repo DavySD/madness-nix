@@ -28,50 +28,45 @@ My **source files** for my current *NixOS* system, with several changes and addi
 ├── flake.lock
 ├── flake.nix
 ├── gm
-│   ├── fltp
-│   │   └── fltp.nix
-│   ├── hw
-│   │   ├── default.nix
-│   │   ├── hc.nix
-│   │   ├── pipewire.nix
-│   │   ├── swap.nix
-│   │   └── vp.nix
-│   ├── pkgs
-│   │   ├── default.nix
-│   │   └── extra
-│   │       ├── flks.nix
-│   │       ├── nix-ld.nix
-│   │       └── thunar.nix
-│   ├── powerpills
-│   │   ├── cpu.nix
-│   │   ├── overlays
-│   │   │   ├── default.nix
-│   │   │   └── mesa.nix
-│   │   └── preload.nix
-│   ├── scy
-│   │   ├── dns.nix
-│   │   └── doas.nix
-│   └── ui
-│       ├── wayf.nix
-│       └── xfce.nix
+│   ├── fltp
+│   │   └── fltp.nix
+│   ├── hw
+│   │   ├── default.nix
+│   │   ├── pipewire.nix
+│   │   ├── swap.nix
+│   │   └── vp.nix
+│   ├── pkgs
+│   │   ├── default.nix
+│   │   └── extra
+│   │       └── thunar.nix
+│   ├── powerpills
+│   │   ├── cpu.nix
+│   │   └── overlays
+│   │       ├── default.nix
+│   │       └── mesa.nix
+│   ├── scy
+│   │   └── doas.nix
+│   └── ui
+│       └── wayf.nix
+├── hardware-configuration.nix
 ├── hm
-│   ├── env
-│   │   ├── dft.nix
-│   │   └── var.nix
-│   ├── look
-│   │   └── gui.nix
-│   ├── overlays
-│   │   ├── default.nix
-│   │   └── zellij-0.nix
-│   ├── pkgs
-│   │   ├── default.nix
-│   │   ├── extra
-│   │   │   ├── default.nix
-│   │   │   ├── helix.nix
-│   │   │   └── kanabox_viado.toml
-│   │   └── fonts
-│   │       └── default.nix
-│   └── shell
-│       └── zsh.nix
+│   ├── env
+│   │   ├── dft.nix
+│   │   └── var.nix
+│   ├── look
+│   │   └── gui.nix
+│   ├── overlays
+│   │   ├── default.nix
+│   │   └── zellij-0.nix
+│   ├── pkgs
+│   │   ├── default.nix
+│   │   ├── extra
+│   │   │   └── default.nix
+│   │   └── fonts
+│   │       └── default.nix
+│   └── shell
+│       └── zsh.nix
 └── home.nix
+
+18 directories, 26 files
 ``` 
