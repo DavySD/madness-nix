@@ -4,29 +4,24 @@
   imports =
     [ 
       ./gm/hw
+      ./hardware-configuration.nix
       ./gm/pkgs
       ./gm/ui/wayf.nix      
       ./gm/fltp/fltp.nix
       ./gm/scy/doas.nix
       ./gm/powerpills/cpu.nix
-      ./gm/powerpills/preload.nix
-      ./gm/scy/dns.nix
-      # ./gm/ui/xfce.nix
-      ./gm/powerpills/overlays
+      # ./gm/powerpills/overlays
     ];
 
   # Boot
-    # efi
+    # Systemd-boot
     boot.loader.efi.canTouchEfiVariables = true; 
-    boot.loader.efi.efiSysMountPoint = "/boot/efi";
-    # grub
-    boot.loader.grub.efiSupport = true;
-    boot.loader.grub.device = "nodev";
+    boot.loader.systemd-boot.enable = true;
     # Tmpfs
     boot.tmp.useTmpfs = true;
 
   # Set kernel.
-  boot.kernelPackages = pkgs.linuxPackages_cachyos-lts;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod;
                                                         
   # Network
   networking.hostName = "Cheshire"; 
@@ -89,5 +84,5 @@
   };
 
   # System state 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 }

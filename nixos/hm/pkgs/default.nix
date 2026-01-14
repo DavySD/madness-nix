@@ -1,31 +1,17 @@
 { config, pkgs, lib, ... }:
 {
+  # Home Packages
   home.packages = with pkgs; [
 
- # Internet
-   equibop
-   (vivaldi.override {proprietaryCodecs = true;})
-   bitwarden-desktop
-   freetube
-   legcord
-   webkitgtk_6_0
-   chromium
-
- # Media
-   telegram-desktop
-   smplayer
+   # Media
+   pear-desktop
    mpv
-   youtube-music
    strawberry
-   ffmpeg-full
-   xfce.ristretto
+   telegram-desktop
 
- # Utils
-   busybox
-   tldr
+   # Utils
    libnotify
    wdisplays
-   yt-dlp
    unrar
    unzip
    peazip
@@ -37,26 +23,23 @@
    alacritty
    git
    zellij
-   nwg-look
 
- # System
+   # System
    nix-output-monitor
    htop
    btop
     
- # Text Editor
+   # Text Editor
    nixd
    nil
-
- # Graphics
+   helix
+   geany
+   
+   # Graphics
    gimp3
    inkscape
-   audacity
 
-
- # Games
-   lutris
-   heroic
+   # Games
    steam-run
    steam
    hydralauncher
@@ -64,7 +47,7 @@
    mesa-demos
    libdrm
    
- # WM things
+   # WM things
    fuzzel
    grim
    slurp
@@ -72,8 +55,6 @@
    wl-clipboard-rs
    swappy
    waybar   
-   kdePackages.qt6ct
-   kdePackages.qt6gtk2
    dunst
   ];
 

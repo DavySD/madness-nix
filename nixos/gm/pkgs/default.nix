@@ -3,18 +3,13 @@
  # Global Packages
  environment.systemPackages = with pkgs; [
 
-  # Sys
-  ffmpeg
+  # System
   wget
   mate.mate-polkit
   mesa
 
   # Audio
   playerctl
-  wineWowPackages.wayland
-  # wineWowPackages.staging
-  winetricks
-  gpu-screen-recorder-gtk
   
   # Compile
   clang
@@ -27,16 +22,19 @@
 ];
 
  # Pains
- programs.xfconf.enable = true;
- programs.nano.enable = false;
  nix.package = pkgs.lixPackageSets.latest.lix; # Enable Lix
- nixpkgs.config.allowUnfree = true;
- programs.appimage.enable = true;
- programs.appimage.binfmt = true;
- programs.gpu-screen-recorder = {
+ nix.settings.experimental-features = ["nix-command" "flakes"]; # Enable Flakes.
+ nixpkgs.config.allowUnfree = true; # Enable unfree packages
+ programs.appimage.enable = true; # Enable Appimages
+ programs.appimage.binfmt = true; # ⬆
+ programs.xfconf.enable = true; # Enable Xf(ce)conf
+ programs.nano.enable = false; # Disable Nano
+ programs.gpu-screen-recorder.enable = true; # Enable GSR
+ programs.nix-ld = { 
   enable = true;
- };
+  libraries = with pkgs; [ ];
+  }; # Nix ld
 
  # Imports
- imports = [ ./extra/flks.nix ./extra/thunar.nix];
+ imports = [ ./extra/thunar.nix ];
 }
