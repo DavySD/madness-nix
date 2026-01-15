@@ -7,6 +7,7 @@
       ./hardware-configuration.nix
       ./gm/pkgs
       ./gm/ui/wayf.nix      
+      # ./gm/ui/dwm.nix
       ./gm/fltp/fltp.nix
       ./gm/scy/doas.nix
       ./gm/powerpills/cpu.nix
@@ -30,6 +31,11 @@
 
   # Set time zone.
   time.timeZone = "America/Maceio";
+
+  # X11
+  services.xserver = {
+    enable = true;
+  };
 
   # Display Manager
   services.displayManager = {
@@ -79,8 +85,9 @@
 
   # Nix Limit
   nix.settings = {
-    max-jobs = 2;
-    cores = 2;
+    max-jobs = 1;
+    cores = 1;
+    auto-optimise-store = true;
   };
 
   # System state 

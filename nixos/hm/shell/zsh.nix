@@ -3,6 +3,7 @@
  programs.zsh = {
   enable = true;
   enableCompletion = true;
+  completionInit = "autoload -U compinit && compinit -C";
   history = {
     size = 5000;
     share = true;

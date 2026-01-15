@@ -15,6 +15,7 @@
    unrar
    unzip
    peazip
+   gammastep
 
    # Accessories
    ncpamixer
@@ -23,6 +24,7 @@
    alacritty
    git
    zellij
+   lazygit
 
    # System
    nix-output-monitor
