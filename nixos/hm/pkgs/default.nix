@@ -3,11 +3,16 @@
   # Home Packages
   home.packages = with pkgs; [
 
+   # Internet
+   discord
+   qutebrowser # Cool web browser
+   
    # Media
-   pear-desktop
+   pear-desktop 
    mpv
-   strawberry
+   strawberry # Music player
    telegram-desktop
+   freetube
 
    # Utils
    libnotify
@@ -15,16 +20,16 @@
    unrar
    unzip
    peazip
-   gammastep
+   gammastep # oh, my eyes
 
    # Accessories
-   ncpamixer
    pavucontrol
    playerctl
    alacritty
-   git
-   zellij
-   lazygit
+   git # normie vcs
+   zellij # terminal multiplexer
+   lazygit # femboy program
+   zathura
 
    # System
    nix-output-monitor
@@ -32,33 +37,39 @@
    btop
     
    # Text Editor
-   nixd
-   nil
-   helix
-   geany
+   nixd # evil lsp
+   nil # good lsp
+   helix # badass editor
+   geany # graphical editor
+   kdePackages.ghostwriter # markdown editor
+   vscodium-fhs
+   go
    
    # Graphics
-   gimp3
+   gimp3 # Gnu (is Not Unix) Image Manipulator Program (3)
    inkscape
 
    # Games
    steam-run
    steam
-   hydralauncher
+   hydralauncher 
    libglvnd
    mesa-demos
    libdrm
+   lutris
+   heroic
    
    # WM things
    fuzzel
    grim
    slurp
    swaybg
-   wl-clipboard-rs
+   wl-clipboard-rs # Why is there a Rust version of this?
    swappy
    waybar   
    dunst
   ];
 
+  programs.firefox = { enable = true; };
   imports = [ ./extra ./fonts ];
 }

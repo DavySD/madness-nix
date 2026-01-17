@@ -19,6 +19,12 @@
   ninja
   llvm
   lld
+
+  # Xorg
+  xorg.xinit
+  libx11
+  libxcb
+  libxinerama
 ];
 
  # Pains

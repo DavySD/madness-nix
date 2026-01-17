@@ -7,11 +7,11 @@
       ./hardware-configuration.nix
       ./gm/pkgs
       ./gm/ui/wayf.nix      
-      # ./gm/ui/dwm.nix
+      ./gm/ui/dwm.nix # 70% functional
       ./gm/fltp/fltp.nix
-      ./gm/scy/doas.nix
+      ./gm/scy/doas.nix 
       ./gm/powerpills/cpu.nix
-      # ./gm/powerpills/overlays
+      # ./gm/powerpills/overlays # I don't have time to compile :(
     ];
 
   # Boot
@@ -35,8 +35,12 @@
   # X11
   services.xserver = {
     enable = true;
+    displayManager.startx.enable = true;
   };
 
+  services.libinput = {
+    enable = true;
+  };
   # Display Manager
   services.displayManager = {
     enable = true;
