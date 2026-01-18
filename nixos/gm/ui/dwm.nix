@@ -40,6 +40,8 @@
       fontconfig
       libxft
       libglvnd
+      libxcomposite
+      libxcb-keysyms
     ];
   }; # Nix ld
 

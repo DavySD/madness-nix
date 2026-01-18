@@ -38,15 +38,27 @@
     displayManager.startx.enable = true;
   };
 
-  services.libinput = {
+  # DE
+  services.xserver.desktopManager.xfce = {
     enable = true;
+    enableWaylandSession = true;
+    waylandSessionCompositor = "labwc";
   };
+  services.xserver.displayManager.lightdm = {
+    enable = true;
+    greeters.gtk = {
+      enable = true;
+      theme.package = pkgs.whitesur-gtk-theme;
+      iconTheme.package = pkgs.whitesur-icon-theme;
+    };
+  };
+
   # Display Manager
-  services.displayManager = {
-    enable = true;
-    ly.enable = true;
-    ly.x11Support = true;
-  };
+  # services.displayManager = {
+    # enable = true;
+    # ly.enable = true;
+    # ly.x11Support = true;
+  # };
 
   # Locales
   i18n.defaultLocale = "pt_BR.UTF-8";
