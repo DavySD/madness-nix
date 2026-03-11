@@ -6,8 +6,7 @@
       ./gm/hw
       ./hardware-configuration.nix
       ./gm/pkgs
-      ./gm/ui/wayf.nix      
-      ./gm/ui/dwm.nix # 70% functional
+      ./gm/ui/labwc.nix      
       ./gm/fltp/fltp.nix
       ./gm/scy/doas.nix 
       ./gm/powerpills/cpu.nix
@@ -25,7 +24,7 @@
   boot.kernelPackages = pkgs.linuxPackages_xanmod;
                                                         
   # Network
-  networking.hostName = "Cheshire"; 
+  networking.hostName = "Cortisol"; 
   networking.wireless.iwd.enable = true;
   networking.wireless.iwd.settings = {Settings = {AutoConnect = true;};};
 
@@ -34,31 +33,16 @@
 
   # X11
   services.xserver = {
-    enable = true;
-    displayManager.startx.enable = true;
-  };
-
-  # DE
-  services.xserver.desktopManager.xfce = {
-    enable = true;
-    enableWaylandSession = true;
-    waylandSessionCompositor = "labwc";
-  };
-  services.xserver.displayManager.lightdm = {
-    enable = true;
-    greeters.gtk = {
-      enable = true;
-      theme.package = pkgs.whitesur-gtk-theme;
-      iconTheme.package = pkgs.whitesur-icon-theme;
-    };
+    enable = false;
+    displayManager.startx.enable = false;
   };
 
   # Display Manager
-  # services.displayManager = {
-    # enable = true;
-    # ly.enable = true;
-    # ly.x11Support = true;
-  # };
+  services.displayManager = {
+    enable = true;
+    ly.enable = true;
+    ly.x11Support = true;
+  };
 
   # Locales
   i18n.defaultLocale = "pt_BR.UTF-8";
@@ -101,8 +85,8 @@
 
   # Nix Limit
   nix.settings = {
-    max-jobs = 1;
-    cores = 1;
+    # max-jobs = 1;
+    # cores = 1
     auto-optimise-store = true;
   };
 

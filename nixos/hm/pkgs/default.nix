@@ -5,13 +5,13 @@
 
    # Internet
    discord
-   qutebrowser # Cool web browser
+   uget
+   uget-integrator
    
    # Media
-   pear-desktop 
    mpv
    strawberry # Music player
-   telegram-desktop
+   # telegram-desktop
    freetube
 
    # Utils
@@ -28,7 +28,6 @@
    alacritty
    git # normie vcs
    zellij # terminal multiplexer
-   lazygit # femboy program
    zathura
 
    # System

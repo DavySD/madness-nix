@@ -6,7 +6,6 @@
   # System
   wget
   mate.mate-polkit
-  mesa
 
   # Audio
   playerctl
@@ -22,9 +21,7 @@
 
   # Xorg
   xorg.xinit
-  libx11
-  libxcb
-  libxinerama
+
 ];
 
  # Pains
