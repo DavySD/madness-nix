@@ -5,7 +5,7 @@
 
   # System
   wget
-  mate.mate-polkit
+  mate-polkit
 
   # Audio
   playerctl
@@ -20,7 +20,7 @@
   lld
 
   # Xorg
-  xorg.xinit
+  xinit
 
 ];
 

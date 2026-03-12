@@ -7,12 +7,16 @@
    discord
    uget
    uget-integrator
+   webcord
+   tailscale-systray
    
    # Media
    mpv
    strawberry # Music player
    # telegram-desktop
    freetube
+   vlc
+   ffmpeg-full
 
    # Utils
    libnotify
@@ -41,7 +45,6 @@
    helix # badass editor
    geany # graphical editor
    kdePackages.ghostwriter # markdown editor
-   vscodium-fhs
    go
    
    # Graphics
@@ -67,6 +70,10 @@
    swappy
    waybar   
    dunst
+   swayidle
+   wlopm
+   kdePackages.dolphin
+   kdePackages.dolphin-plugins
   ];
 
   programs.firefox = { enable = true; };

@@ -11,7 +11,7 @@
   outputs = { self, nixpkgs, home-manager } @ inputs: {
 
    nixosConfigurations = {
-     "Cheshire" = nixpkgs.lib.nixosSystem {
+     "Cortisol" = nixpkgs.lib.nixosSystem {
        specialArgs = { inherit inputs; };
        system = "x86_64-linux";
        modules = [ ./config.nix ];
@@ -19,7 +19,7 @@
    }; 
 
    homeConfigurations = {
-     "deive@Cheshire" = home-manager.lib.homeManagerConfiguration {
+     "deive@Cortisol" = home-manager.lib.homeManagerConfiguration {
        pkgs = nixpkgs.legacyPackages."x86_64-linux";
        modules = [ ./home.nix ];
      };

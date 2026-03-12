@@ -14,9 +14,15 @@
     ];
 
   # Boot
-    # Systemd-boot
+    # Limine
     boot.loader.efi.canTouchEfiVariables = true; 
-    boot.loader.systemd-boot.enable = true;
+    boot.loader.limine.enable = true;
+    boot.loader.systemd-boot.enable = false;
+    boot.loader.grub = { 
+	enable = false;
+#	device = "nodev";
+#	efiSupport = true; 
+     };
     # Tmpfs
     boot.tmp.useTmpfs = true;
 
@@ -27,6 +33,13 @@
   networking.hostName = "Cortisol"; 
   networking.wireless.iwd.enable = true;
   networking.wireless.iwd.settings = {Settings = {AutoConnect = true;};};
+  services.tailscale.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PermitRootLogin = "yes";
+    };
+  };
 
   # Set time zone.
   time.timeZone = "America/Maceio";
@@ -68,7 +81,7 @@
   users.users.deive = {
     isNormalUser = true;
     description = "deive";
-    extraGroups = [ "wheel" "seat" "video" ];
+    extraGroups = [ "wheel" "seat" "video" "rtkit" "pipewire" ];
     packages = with pkgs; [ tree ];
   };
 
@@ -85,8 +98,8 @@
 
   # Nix Limit
   nix.settings = {
-    # max-jobs = 1;
-    # cores = 1
+    max-jobs = 1;
+    cores = 1;
     auto-optimise-store = true;
   };
 
