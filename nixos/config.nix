@@ -7,6 +7,7 @@
       ./hardware-configuration.nix
       ./gm/pkgs
       ./gm/ui/labwc.nix      
+      ./gm/ui/dwm.nix
       ./gm/fltp/fltp.nix
       ./gm/scy/doas.nix 
       ./gm/powerpills/cpu.nix
@@ -19,11 +20,7 @@
     boot.loader.efi.canTouchEfiVariables = true; 
     boot.loader.limine.enable = true;
     boot.loader.systemd-boot.enable = false;
-    boot.loader.grub = { 
-	enable = false;
-#	device = "nodev";
-#	efiSupport = true; 
-     };
+    boot.loader.grub.enable = false;
     # Tmpfs
     boot.tmp.useTmpfs = true;
 
@@ -35,15 +32,21 @@
   networking.wireless.iwd.enable = true;
   networking.wireless.iwd.settings = {Settings = {AutoConnect = true;};};
   services.tailscale.enable = true;
-  services.upower.enable = true;
+  services.openssh = {
+    enable = true;
+      settings = {
+        PasswordAuthentication = true;
+        PermitRootLogin = "yes";
+      };
+  };
 
   # Set time zone.
   time.timeZone = "America/Maceio";
 
   # X11
   services.xserver = {
-    enable = false;
-    displayManager.startx.enable = false;
+    enable = true;
+    displayManager.startx.enable = true;
   };
 
   # Display Manager
@@ -87,6 +90,7 @@
 
   # Logind
   services.logind.settings.Login.HandleLidSwitch = "ignore";
+  services.upower.enable = true;
 
   # Security
   security.polkit.enable = true;  

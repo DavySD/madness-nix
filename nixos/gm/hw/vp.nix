@@ -6,13 +6,15 @@
    enable32Bit = true;
    extraPackages = with pkgs; [
     intel-media-driver
-    libva
-    libva-utils
+    vpl-gpu-rt
+    intel-vaapi-driver
     ];
   };
+ 
  environment = {
-  sessionVariables = {LIBVA_DRIVER_NAME = "HD";};  
+  systemPackages = with pkgs; [ libva libva-utils ];
+  sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; };  
 };
  hardware.enableRedistributableFirmware = true;
- boot.kernelParams = [ ];
+ boot.kernelParams = [ "i915.enable_guc=3" ];
  }

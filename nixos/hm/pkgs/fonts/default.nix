@@ -22,6 +22,8 @@
     inter
     noto-fonts
     noto-fonts-color-emoji    
+    nerd-fonts.hurmit
+    hermit
   ];
 
 }
