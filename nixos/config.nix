@@ -10,6 +10,7 @@
       ./gm/fltp/fltp.nix
       ./gm/scy/doas.nix 
       ./gm/powerpills/cpu.nix
+      ./gm/powerpills/hibernate.nix
       # ./gm/powerpills/overlays # I don't have time to compile :(
     ];
 
@@ -30,16 +31,11 @@
   boot.kernelPackages = pkgs.linuxPackages_xanmod;
                                                         
   # Network
-  networking.hostName = "Cortisol"; 
+  networking.hostName = "Cain"; 
   networking.wireless.iwd.enable = true;
   networking.wireless.iwd.settings = {Settings = {AutoConnect = true;};};
   services.tailscale.enable = true;
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "yes";
-    };
-  };
+  services.upower.enable = true;
 
   # Set time zone.
   time.timeZone = "America/Maceio";

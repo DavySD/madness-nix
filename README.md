@@ -21,7 +21,7 @@ My **source files** for my current *NixOS* system, with several changes and addi
 
 ---
 
-## ❄️ | Structure (22/11/25)
+## ❄️ | Structure (16/04/26)
 ```bash
 /etc/nixos
 ├── config.nix
@@ -41,13 +41,16 @@ My **source files** for my current *NixOS* system, with several changes and addi
 │   │       └── thunar.nix
 │   ├── powerpills
 │   │   ├── cpu.nix
+│   │   ├── hibernate.nix
 │   │   └── overlays
 │   │       ├── default.nix
 │   │       └── mesa.nix
 │   ├── scy
 │   │   └── doas.nix
 │   └── ui
-│       └── wayf.nix
+│       ├── labwc.nix
+│       └── src
+│           └── DWM-FILES.zip
 ├── hardware-configuration.nix
 ├── hm
 │   ├── env
@@ -68,5 +71,5 @@ My **source files** for my current *NixOS* system, with several changes and addi
 │       └── zsh.nix
 └── home.nix
 
-18 directories, 26 files
+19 directories, 28 files
 ``` 

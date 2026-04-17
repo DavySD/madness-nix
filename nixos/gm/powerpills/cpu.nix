@@ -1,6 +1,6 @@
 {config, ...}:
 {
   powerManagement = {
-    cpuFreqGovernor = "ondemand";
+    cpuFreqGovernor = "schedutil";
   };
 }

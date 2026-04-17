@@ -17,6 +17,12 @@
    freetube
    vlc
    ffmpeg-full
+   pear-desktop
+
+   # Office
+   libreoffice
+   hunspell
+   hunspellDicts.pt-br
 
    # Utils
    libnotify
@@ -25,6 +31,8 @@
    unzip
    peazip
    gammastep # oh, my eyes
+   s-tui
+   stress
 
    # Accessories
    pavucontrol
@@ -38,13 +46,13 @@
    nix-output-monitor
    htop
    btop
+   upower
     
    # Text Editor
    nixd # evil lsp
    nil # good lsp
    helix # badass editor
    geany # graphical editor
-   kdePackages.ghostwriter # markdown editor
    go
    
    # Graphics
@@ -53,13 +61,11 @@
 
    # Games
    steam-run
-   steam
+   # steam
    hydralauncher 
    libglvnd
    mesa-demos
    libdrm
-   lutris
-   heroic
    
    # WM things
    fuzzel
@@ -68,12 +74,9 @@
    swaybg
    wl-clipboard-rs # Why is there a Rust version of this?
    swappy
-   waybar   
    dunst
    swayidle
    wlopm
-   kdePackages.dolphin
-   kdePackages.dolphin-plugins
   ];
 
   programs.firefox = { enable = true; };
