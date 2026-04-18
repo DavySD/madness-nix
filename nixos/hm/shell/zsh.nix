@@ -10,7 +10,8 @@
     share = true;
     save = 5000;
     };
-  initContent = " export PROMPT='%~ λ ' ";
+  initContent = " export PROMPT='%~ λ '
+                  export PATH=/home/deive/.local/bin:$PATH ";
   shellAliases = {
     nx = "doas nixos-rebuild switch --flake path:/etc/nixos#Cheshire |& nom";
     hm = "home-manager switch --flake path:/etc/nixos#deive@Cheshire |& nom";

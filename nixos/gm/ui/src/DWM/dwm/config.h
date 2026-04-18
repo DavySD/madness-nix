@@ -15,7 +15,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hurmit Nerd Font:style=Bold:size=10" };
+static const char *fonts[]          = { "Hurmit Nerd Font:style=Bold:size=12" };
 static const char *colors[][3] = {
     /*                 fg         bg         border   */
     [SchemeNorm] = { "#6b6052", "#0f0f0f", "#2e2820" }, 

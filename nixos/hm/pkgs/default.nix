@@ -13,7 +13,7 @@
    # Media
    mpv
    strawberry # Music player
-   # telegram-desktop
+   telegram-desktop
    freetube
    vlc
    ffmpeg-full
